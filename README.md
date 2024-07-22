@@ -1,2 +1,2 @@
 # flashcard_chrome_extension
-Chrome extension that redesigns the new tab page with a functioning
+This is a Chrome extension that redesigns the new tab page with a search bar, quicklink widgets to whatever sites the user inputs, and a flashcard widget with different manageable sets, the ability to import sets from a .txt file, and editing functions. I made this mainly to help me study more as I am currently preparing for the CompTIA Security+ Exam. I just imported a bunch of terms from some online resources and now I can be reminded to study them whenever I open a new tab. It was also a chance for me to exercise my HTML, CSS, and JS skills in web development.
