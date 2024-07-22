@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Custom New Tab</title>
+  <link rel="stylesheet" href="styles.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap">
+  <script src="newtab.js" defer></script>
+</head>
+<body>
+  <div class="container">
+    <div class="search-bar">
+      <form id="searchForm" action="https://www.google.com/search" method="get">
+        <input type="text" name="q" id="searchInput" placeholder="Search Google...">
+        <button type="submit">Search</button>
+      </form>
+    </div>
+    <div class="quick-links">
+      <a href="#" id="link1">Right click me!</a>
+      <a href="#" id="link2">Right click me!</a>
+      <a href="#" id="link3">Right click me!</a>
+      <a href="#" id="link4">Right click me!</a>
+    </div>
+    <div class="flashcard-widget">
+      <div class="flashcard-sidebar">
+        <button id="toggle-sidebar" class="toggle-button">☰</button>
+        <div class="flashcard-set-list">
+          <input type="file" id="file-input" accept=".txt">
+          <p id="import-instruction">Import a .txt file to create a new flashcard set.</p>
+          <ul id="set-list"></ul>
+        </div>
+      </div>
+      <button id="collapse-button" class="collapse-button">☰</button>
+      <div class="flashcard-main">
+        <button id="prev-button">←</button>
+        <div id="flashcard">
+          <p id="flashcard-content" class="clickable">Click to flip</p>
+          <i id="flag-icon" class="fas fa-flag"></i>
+        </div>
+        <button id="next-button">→</button>
+        <div id="flashcard-counter">1/1</div>
+      </div>
+    </div>
+    <div class="filter-flashcards">
+      <input type="radio" id="all-cards" name="filter" value="all" checked>
+      <label for="all-cards">All Cards</label>
+      <input type="radio" id="flagged-cards" name="filter" value="flagged">
+      <label for="flagged-cards">Flagged Cards</label>
+    </div>
+  </div>
+  <div id="link-popup" class="popup">
+    <div class="popup-content">
+      <label for="link-url">Enter URL:</label>
+      <input type="text" id="link-url" placeholder="https://example.com"><br>
+      <label for="link-name">Button Name:</label>
+      <input type="text" id="link-name" placeholder="My Link"><br>
+      <label for="link-color">Button Color:</label>
+      <input type="color" id="link-color"><br>
+      <button id="save-link">Save</button>
+      <button id="reset-link">Reset</button>
+      <button id="cancel-link">Cancel</button>
+    </div>
+  </div>
+  <div id="flashcard-edit-popup" class="popup">
+    <div class="popup-content">
+      <label for="flashcard-edit-term">Term:</label>
+      <input type="text" id="flashcard-edit-term"><br>
+      <label for="flashcard-edit-definition">Definition:</label>
+      <input type="text" id="flashcard-edit-definition"><br>
+      <button id="flashcard-edit-save">Save</button>
+      <button id="flashcard-edit-delete">Delete</button>
+      <button id="flashcard-edit-cancel">Cancel</button>
+    </div>
+  </div>
+  <div id="set-edit-popup" class="popup">
+    <div class="popup-content">
+      <label for="set-edit-title">Title:</label>
+      <input type="text" id="set-edit-title"><br>
+      <button id="set-edit-save">Save</button>
+      <button id="set-edit-delete">Delete</button>
+      <button id="set-edit-cancel">Cancel</button>
+    </div>
+  </div>
+  <div id="manual-add-popup" class="popup">
+    <div class="popup-content">
+      <label for="manual-set-title">Set Title:</label>
+      <input type="text" id="manual-set-title"><br>
+      <label for="manual-add-term">Term:</label>
+      <input type="text" id="manual-add-term"><br>
+      <label for="manual-add-definition">Definition:</label>
+      <input type="text" id="manual-add-definition"><br>
+      <button id="manual-add-save">Add</button>
+      <button id="manual-add-cancel">Cancel</button>
+    </div>
+  </div>
+</body>
+</html>
